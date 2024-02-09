@@ -2338,6 +2338,7 @@ var x = setInterval(function () {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+  document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
   document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
   document.getElementById("minutes").innerHTML =
     minutes < 10 ? "0" + minutes : minutes;
@@ -2350,3 +2351,42 @@ var x = setInterval(function () {
     showChucMung();
   }
 }, 1000);
+
+function LiXi() {
+  const swalWithBootstrapButtons = Swal.mixin({
+    customClass: {
+      confirmButton: "btn-success",
+      cancelButton: "btn-danger",
+    },
+    buttonsStyling: false,
+  });
+  swalWithBootstrapButtons
+    .fire({
+      title: "Bạn chắc chắn chọn lì xì?",
+      text: "Bạn sẽ không thể nhận được lời chúc!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Chọn lại >_<",
+      cancelButtonText: "Chắc chắn !",
+      reverseButtons: true,
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+        // swalWithBootstrapButtons.fire({
+        //   title: "Yeah!",
+        //   text: "Hãy chọn lời chúc nhé",
+        //   icon: "success",
+        // });
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        // swalWithBootstrapButtons.fire({
+        //   title: "No no no",
+        //   text: "Bạn không có quyền lựa chọn",
+        //   icon: "error",
+        // });
+        LiXi();
+      }
+    });
+}

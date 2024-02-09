@@ -152,17 +152,28 @@
             </div>
         </div>
         <div id="countdown" class="countdown-container">
+            <div id="title">Countdown new year 2024</div>
+            <br>
+            <span id="days">00</span>
+            <p>:</p>
             <span id="hours">00</span>
             <p>:</p>
             <span id="minutes">00</span>
             <p>:</p>
             <span id="seconds">00</span>
+            <div class="wrapper">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+                <div class="shadow"></div>
+            </div>
         </div>
         <div id="chucMung" class="chuc-mung hidden">Chúc mừng năm mới 2024
             <br>
-            <br>
-            <button class="btn-loiChuc">Nhận lời chúc</button>
-            <button class="btn-liXi">Nhận lì xì</button>
+            <a class="btn-loiChuc" href="LoiChuc/HappyNewYear/intro.html">Lời chúc</a>
+            <button class="btn-liXi" onclick="LiXi()">Lì xì</button>
         </div>
     </div>
     <!-- partial -->
@@ -170,7 +181,8 @@
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/Stage%400.1.4.js'></script>
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js'></script>
     <script src="./script.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
 </body>
 
 </html>
