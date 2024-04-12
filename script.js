@@ -1,6 +1,6 @@
 "use strict";
 console.clear();
-
+//test
 // This is a prime example of what starts out as a simple project
 // and snowballs way beyond its intended size. It's a little clunky
 // reading/working on this single file, but here it is anyways :)
